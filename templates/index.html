@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/mainpage.css') }}"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>Pediction Using Machine Learning</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <form id="contact" action="/predict" method="post">
+          <h3>Company Profit Prediction</h3>
+          <h4>Fill the following Details to predict profit [In Dollars]</h4>
+          <fieldset>
+            <input
+              placeholder="R&D Spend"
+              type="text"
+              name="rd spend"
+              required
+              autofocus
+              autocomplete="off"
+            />
+          </fieldset>
+          <fieldset>
+            <input
+              placeholder="Administration"
+              type="text"
+              name="administration"
+              required
+              autocomplete="off"
+            />
+          </fieldset>
+          <fieldset>
+            <input
+              placeholder="Marketing Spend"
+              type="text"
+              name="marketing spend"
+              required
+              autocomplete="off"
+            />
+          </fieldset>
+          <fieldset>
+            <button
+              name="submit"
+              type="submit"
+              id="contact-submit"
+              data-submit="...Predicting"
+            >
+              Predict
+            </button>
+          </fieldset>
+          <p id="result">{{result}}</p>
+          <p class="copyright">
+            Designed by
+            <a href="https://github.com/punyaprashun25/Company_Profit_Prediction" target="_blank" title="Colorlib">Punya Prashun<span>❤️</span></a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
