@@ -57,7 +57,7 @@ section::after {
 .container {
     position: relative;
     width: 400px;
-    height: 500px;
+    height: 580px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);

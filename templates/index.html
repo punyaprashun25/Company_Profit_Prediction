@@ -9,7 +9,7 @@
       type="text/css"
       href="{{ url_for('static',filename='styles/mainpage.css') }}"
     />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- <link rel="stylesheet" href="../static/styles/mainpage.css" /> -->
     <title>Pediction Using Machine Learning</title>
   </head>
   <body>
@@ -18,6 +18,16 @@
         <form id="contact" action="/predict" method="post">
           <h3>Company Profit Prediction</h3>
           <h4>Fill the following Details to predict profit [In Dollars]</h4>
+          <fieldset>
+            <input
+              placeholder="Company Name"
+              type="text"
+              name="company_name"
+              required
+              autofocus
+              autocomplete="off"
+            />
+          </fieldset>
           <fieldset>
             <input
               placeholder="R&D Spend"
